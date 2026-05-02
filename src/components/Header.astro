@@ -1,6 +1,13 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
 <header class="m-0 p-6 shadow-md">
-  <nav class="align-items-center flex items-center justify-between">
-    <h2 class="text-2xl font-bold lg:px-8"><a href="/">ICECREAM</a></h2>
-    <!-- <div class="px-8">asddasdas</div> -->
+  <nav class="align-items-center flex items-center justify-between md:px-8">
+    <h2 class="text-2xl font-bold"><a href="/">ICECREAM</a></h2>
+    <div class="flex gap-4 md:gap-6">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/rankings">Rankings</HeaderLink>
+    </div>
   </nav>
 </header>
