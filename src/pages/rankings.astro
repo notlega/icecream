@@ -1,8 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+const posts = await getCollection("blog");
 ---
 
 <!doctype html>
@@ -13,8 +16,41 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
   <body>
     <Header />
-    <main class="m-auto grid max-w-5xl justify-items-center px-8 py-12">
-      <section>hi</section>
+    <main class="m-auto grid max-w-5xl justify-center px-8 py-12">
+      <div class="relative overflow-auto">
+        <table
+          class="border-foreground table-fixed border-collapse border text-left"
+        >
+          <thead>
+            <tr class="*:border-foreground *:border *:px-4 *:py-2">
+              <th>Rank</th>
+              <th class="border-r-0!">Location</th>
+              <th class="border-x-0!"></th>
+              <th class="border-l-0!"></th>
+              <th>Taste</th>
+              <th>Waffle</th>
+              <th>Overall</th>
+            </tr>
+          </thead>
+          <tbody class="table-row-group">
+            {
+              posts.map((post, index) => (
+                <tr class="*:border-foreground table-row *:border *:px-4 *:py-2">
+                  <td class="table-cell">{index + 1}</td>
+                  <td class="table-cell" colspan="3">
+                    {post.data.title}
+                  </td>
+                  <td class="table-cell">{post.data.taste}</td>
+                  <td class="table-cell">{post.data.waffle}</td>
+                  <td class="table-cell">
+                    {Math.floor((post.data.taste + post.data.waffle) / 2)}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </main>
     <Footer />
   </body>

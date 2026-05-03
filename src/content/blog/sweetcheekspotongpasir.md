@@ -3,6 +3,8 @@ title: "Sweet Cheeks (Potong Pasir)"
 description: "A review of the popular ice cream parlour Sweet Cheeks (Potong Pasir) outlet"
 pubDate: "8 May 2026"
 heroImage: "../../assets/blog-placeholder-2.jpg"
+taste: 10
+waffle: 10
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ullamcorper eros, ut varius urna pellentesque vel. Integer malesuada nunc leo, placerat pharetra mi varius a. Curabitur ornare, nisl non sagittis pretium, massa ligula imperdiet quam, at tempus ex nisl a tortor. Ut aliquet sapien sed neque blandit posuere. In bibendum, erat eget porta vestibulum, lectus ante gravida magna, vitae semper tellus nulla nec metus. Sed et elit quis est mattis pulvinar et non ipsum. Donec pellentesque sodales ligula id rutrum. Phasellus bibendum maximus gravida. Nulla sit amet neque ultricies, convallis erat id, efficitur tellus.
