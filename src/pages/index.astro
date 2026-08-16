@@ -26,7 +26,7 @@ const posts = (await getCollection("blog")).sort(
           {
             posts.map((post) => (
               <li class="w-[calc(50%-1em)] first:mb-1 first:w-full first:text-center">
-                <a class="group/link" href={`/${post.id}/`}>
+                <a class="group/link grid gap-2" href={`/${post.id}/`}>
                   {post.data.heroImage && (
                     <Image
                       class="mb-2 rounded-lg group-hover/link:shadow-lg first:w-full"
