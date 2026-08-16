@@ -9,7 +9,8 @@ import { SITE_TITLE } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, author } =
+  Astro.props;
 const updatedTitle = `${title} - ${SITE_TITLE}`;
 ---
 
@@ -37,8 +38,9 @@ const updatedTitle = `${title} - ${SITE_TITLE}`;
         </div>
         <div class="prose m-auto max-w-3xl p-2">
           <div class="line-height-none py-4 text-center">
-            <div class="text-muted-foreground text-md md:text-xl">
+            <div class="text-muted-foreground text-md my-4 md:text-xl">
               <FormattedDate date={pubDate} />
+              {author && <div class="font-italic">by {author}</div>}
               {
                 updatedDate && (
                   <div class="font-italic">

@@ -27,7 +27,7 @@ const posts = await getCollection("blog");
               <th class="border-r-0!">Location</th>
               <th class="border-x-0!"></th>
               <th class="border-l-0!"></th>
-              <th>Taste</th>
+              <th>Ice Cream</th>
               <th>Waffle</th>
               <th>Overall</th>
             </tr>
@@ -40,10 +40,10 @@ const posts = await getCollection("blog");
                   <td class="table-cell" colspan="3">
                     {post.data.title}
                   </td>
-                  <td class="table-cell">{post.data.taste}</td>
+                  <td class="table-cell">{post.data.icecream}</td>
                   <td class="table-cell">{post.data.waffle}</td>
                   <td class="table-cell">
-                    {Math.floor((post.data.taste + post.data.waffle) / 2)}
+                    {Math.floor((post.data.icecream + post.data.waffle) / 2)}
                   </td>
                 </tr>
               ))
